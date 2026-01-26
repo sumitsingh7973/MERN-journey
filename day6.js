@@ -20,28 +20,55 @@
 // let light = false;
 // let bulb = light? "on":"off"
 // console.log(bulb);
+// function nameCaller(){
+//     const names = ["aman","tillu-badmsh","pink-gunda","raju-hatela"]
+//     let index=0;
+//     return function(){
+//         if(index < names.length){
+//             console.log(names[index]);
+//             index++
+//         }else{
+//              index= 0
+//             names[index]
+//             index++
+//         }
+//     }
+// }
+// const paji = nameCaller()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
+// paji()
 function nameCaller(){
-    const names = ["aman","tillu-badmsh","pink-gunda","raju-hatela"]
-    let index=0;
+    const naam = ["sumit","amit","aman"]
+    let index = 0
     return function(){
-        if(index < names.length){
-            console.log(names[index]);
-            index++
-        }else{
-             index= 0
-            names[index]
-            index++
-        }
+    if(index < naam.length){
+        console.log(naam[index]);
+        index ++
+    }else{
+        index=0;
+         console.log(naam[index]);
+        index ++
+         }
     }
 }
-const paji = nameCaller()
-paji()
-paji()
-paji()
-paji()
-paji()
-paji()
-paji()
-paji()
-paji()
-paji()
+
+ const name = nameCaller()
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ name()   
+ 
