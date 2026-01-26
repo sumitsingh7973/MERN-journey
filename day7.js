@@ -25,15 +25,35 @@
 // console.log(updateData);
 
 
-const stn ={
-    name : "kavya",
-    subject : " hindi",
-    city : "mohali",
-    parents : {
-        fatherName :"harendra singh",
-        motherName : "vimla devi"
-    }
-}
+// const stn ={
+//     name : "kavya",
+//     subject : " hindi",
+//     city : "mohali",
+//     parents : {
+//         fatherName :"harendra singh",
+//         motherName : "vimla devi"
+//     }
+// }
 
-console.log(stn.parents.fatherName);
-console.log(stn.parents.motherName);
+// console.log(stn.parents.fatherName);
+// console.log(stn.parents.motherName);
+// const obj = {
+//     name : "sumit",
+//     section : "b",
+//     blood_group : "A"
+// };
+// obj.state = "punjab"
+// const {name, state} = obj
+// console.log(name);
+// console.log(state);
+
+
+//array destructurnig
+
+const arr = ["sumit","amit","aman","kavya"]
+const [ a,b, ,]= arr
+console.log(a);
+console.log(b);
+console.log();
+
+
