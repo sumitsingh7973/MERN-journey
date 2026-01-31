@@ -1,8 +1,6 @@
 import { useState, useEffect} from "react";
-
 function Users(){
     const [ users , setUsers] = useState([])
-
     useEffect(()=>{
         fetch("http://localhost:5000/users")
         .then(res => res.join())

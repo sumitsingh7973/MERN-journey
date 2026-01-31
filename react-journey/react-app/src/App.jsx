@@ -1,4 +1,5 @@
 import './App.css'
+import AddUser from './components/addUser'
 import Users from './components/Users'
 
   function App() {
@@ -10,7 +11,8 @@ import Users from './components/Users'
     return (
       <>
       <h1>Users</h1>
-      <Users/>
+      
+      <AddUser/>
       </>
     )
   }
