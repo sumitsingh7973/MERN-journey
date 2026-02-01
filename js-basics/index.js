@@ -36,6 +36,11 @@ app.get('/api/products', (req, res) => {
         }
     ]
 
+    if(req.query.search){
+       const filterProducts = products.filter(product => product.name.includes(req.query.search))
+       res.send(filterProducts)
+       return;
+    }
     setTimeout(() => {
         res.send(products);
     }, 3000)
