@@ -1,20 +1,25 @@
-import './App.css'
-// import AddUser from './components/addUser'
-// import Users from './components/Users'
+import React, { useEffect } from 'react'
 
-  function App() {
-    // const [count , setCount] = useState(0)
+function App  ()  {
 
-    // useEffect(()=>{
-    //   console.log("Count change hua");
-    // },[count])
-    return (
-      <>
-      <h1>Users</h1>
-      
-      {/* <AddUser/> */}
-      </>
-    )
-  }
+  useEffect(()=>{
+    console.log("api call start");
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then( response => response.json())
+      .then(data =>{
+        console.log("API", data);
+      })    
+      .catch(error =>{
+        console.log("error",error);
+      })
 
-  export default App
+  },[])
+
+  return (
+    <h1>
+      day2 -API call console check krna h
+    </h1>
+  )
+}
+
+export default App
