@@ -1,6 +1,6 @@
 import './App.css'
-import AddUser from './components/addUser'
-import Users from './components/Users'
+// import AddUser from './components/addUser'
+// import Users from './components/Users'
 
   function App() {
     // const [count , setCount] = useState(0)
@@ -12,7 +12,7 @@ import Users from './components/Users'
       <>
       <h1>Users</h1>
       
-      <AddUser/>
+      {/* <AddUser/> */}
       </>
     )
   }
