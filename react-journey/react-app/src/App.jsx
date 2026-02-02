@@ -1,25 +1,24 @@
-import React, { useEffect } from 'react'
+import { useEffect,useState } from "react";
 
-function App  ()  {
+function App (){
+  const[users, setUsers] = useState([]);
 
   useEffect(()=>{
-    console.log("api call start");
     fetch("https://jsonplaceholder.typicode.com/users")
-      .then( response => response.json())
-      .then(data =>{
-        console.log("API", data);
-      })    
-      .catch(error =>{
-        console.log("error",error);
-      })
-
+    .then(response => response.json())
+    .then(data =>{
+      setUsers(data)
+    })
   },[])
 
-  return (
-    <h1>
-      day2 -API call console check krna h
-    </h1>
+  return(
+    <>
+    <h1>Users list</h1>
+    {users.map((user)=>(
+      <p key={user.id}>{user.name}</p>
+    ))}
+    </>
   )
-}
+} 
 
 export default App
