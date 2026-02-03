@@ -1,24 +1,37 @@
-import { useEffect,useState } from "react";
+import React from 'react'
+import { useState, useEffect } from 'react'
 
-function App (){
+function App  ()  {
   const[users, setUsers] = useState([]);
-
+  const[loading, setLoading] = useState(true);
+  const[error, setError] = useState(null);
   useEffect(()=>{
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then(response => response.json())
-    .then(data =>{
-      setUsers(data)
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response =>{
+      if(!response.ok){throw new Error("Data load nhi hua")
+      }
+    return response.json()
     })
+    .then(data =>{
+      setUsers(data);
+      setLoading(false)
+    });
   },[])
 
-  return(
-    <>
-    <h1>Users list</h1>
-    {users.map((user)=>(
-      <p key={user.id}>{user.name}</p>
-    ))}
-    </>
+  if(loading){
+    return <h2>loading...</h2>
+  }
+
+  if(error){
+    return <h2>error: {error}</h2>
+  }
+
+  return (
+    <div>
+      <h1>user list</h1>
+      {users.map(user=>( <p key = {user.id}>{user.name}</p>))}
+    </div>
   )
-} 
+}
 
 export default App
