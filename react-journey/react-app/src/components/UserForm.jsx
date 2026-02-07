@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function UserForm(){
     const[name , setName] = useState('')
+    useEffect(()=>{
+        setName[name]
+    },[])
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -26,10 +29,14 @@ function UserForm(){
     }
 
     return(
+        <div>
+        <h1>name[setName]</h1>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
             <button type="submit">Submit</button>
         </form>
+        </div>
+        
     )
 }
 export default UserForm
