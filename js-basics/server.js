@@ -3,7 +3,9 @@ const app = express()
 
 const userRoutes = require('./routes/userRoutes')
 
-app.use(userRoutes)
+
+app.use(express.json())
+app.use('/api',userRoutes)
 app.get('/',(req,res)=>{
     res.send("server is runnig")
 })

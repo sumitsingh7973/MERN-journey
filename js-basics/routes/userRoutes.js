@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router();
 
-const users = require("../data/users")
-router.get('/users', (req,res)=>{
-    res.json(users)
-})
+const { getUsers , addUsers} = require('../controllers/userControllers')
+
+router.get('/users', getUsers)
+router.post('/users', addUsers)
+
 
 module.exports = router
