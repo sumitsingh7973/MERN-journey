@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 function UserForm(){
     const[name , setName] = useState('')
     const[user , setUser] = useState(null)
-    useEffect(()=>{
-        setName[name]
-    },[])
-
     const handleSubmit = (e) =>{
         e.preventDefault();
 
