@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function UserForm(){
     const[name , setName] = useState('')
+    const[user , setUser] = useState(null)
     useEffect(()=>{
         setName[name]
     },[])
@@ -20,7 +21,7 @@ function UserForm(){
     })
     .then(response => response.json())
     .then(data =>{
-        console.log("response", data);
+        setUser(data)
     })
     .catch(error =>{
         console.log("Error",error);
@@ -30,10 +31,11 @@ function UserForm(){
 
     return(
         <div>
-        <h1>name[setName]</h1>
+        <h1></h1>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
             <button type="submit">Submit</button>
+            {user && <p>user added:{user.name}</p>}
         </form>
         </div>
         
