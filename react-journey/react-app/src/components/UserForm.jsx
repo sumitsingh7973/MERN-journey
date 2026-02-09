@@ -5,6 +5,7 @@ function UserForm(){
     const[user , setUser] = useState(null)
     const handleSubmit = (e) =>{
         e.preventDefault();
+        if(name.trim() === "") return;
 
     fetch("https://jsonplaceholder.typicode.com/users",{
         method:"POST",
