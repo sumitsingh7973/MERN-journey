@@ -1,10 +1,32 @@
 import { useEffect , useState } from "react";
 import Userform from "./components/UserForm";
 
-function app (){
+function App (){
   const [ users , setUsers] = useState([]);
 
   useEffect (()=>{
-    fetch("https://jsonplaceholder")
-  })
+    fetch("https://jsonplaceholder.typicode.com/users")
+          .then(response => response.json())
+          .then(data => setUsers(data))
+  },[])
+
+  const addUsers = (newUsers) =>{
+    setUsers(prevUsers => [...prevUsers, newUsers]);
+  };
+
+  return(
+    <div>
+      <h2>Users list</h2>
+
+    <Userform onAddUsers = {addUsers}/>
+
+    {users.map(user =>{
+      <p key={user.id}>{user.name}</p>
+    })}
+
+    </div>
+  )
+
 }
+
+export default App
