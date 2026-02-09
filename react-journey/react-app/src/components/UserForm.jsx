@@ -1,6 +1,6 @@
 import {  useState } from "react";
 
-function UserForm(onAddUser){
+function UserForm({onAddUser}){
     const[name , setName] = useState('')
     const handleSubmit = async(e) =>{
         e.preventDefault();
@@ -31,8 +31,8 @@ function UserForm(onAddUser){
         <div>
         <h1></h1>
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <button type="submit">Submit</button>
+            <input placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
+            <button >Submit</button>
         </form>
         </div>
         

@@ -18,7 +18,7 @@ function App (){
     <div>
       <h2>Users list</h2>
 
-    <Userform onAddUsers = {addUsers}/>
+    <Userform onAddUser = {addUsers}/>
 
     {users.map(user =>{
       <p key={user.id}>{user.name}</p>
