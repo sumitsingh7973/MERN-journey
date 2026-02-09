@@ -1,29 +1,30 @@
 import {  useState } from "react";
 
-function UserForm(){
+function UserForm(onAddUser){
     const[name , setName] = useState('')
-    const[user , setUser] = useState(null)
-    const handleSubmit = (e) =>{
+    const handleSubmit = async(e) =>{
         e.preventDefault();
         if(name.trim() === "") return;
+        
+        try {
+            const res = await fetch("https://jsonplaceholder.typicode.com/users",
+                 {
+                    method: "POST",
+                    headers: {"Content-Type":"application/json"},
+                    body : JSON.stringify({name}),
+                }
+            );
 
-    fetch("https://jsonplaceholder.typicode.com/users",{
-        method:"POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body:JSON.stringify({
-            name:name,
-        }),
-    })
-    .then(response => response.json())
-    .then(data =>{
-        setUser(data)
-    })
-    .catch(error =>{
-        console.log("Error",error);
-    })
-    
+            const data = await res.json();
+
+            onAddUser(data);
+
+            setName("")
+               
+        } catch (error) {
+            console.log("error", error);
+            
+        }
     }
 
     return(
@@ -32,7 +33,6 @@ function UserForm(){
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}/>
             <button type="submit">Submit</button>
-            {user && <p>user added:{user.name}</p>}
         </form>
         </div>
         
