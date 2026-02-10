@@ -1,32 +1,11 @@
-import { useEffect , useState } from "react";
-import Userform from "./components/UserForm";
+import ToggleText from "./components/ToggleText";
 
-function App (){
-  const [ users , setUsers] = useState([]);
-
-  useEffect (()=>{
-    fetch("https://jsonplaceholder.typicode.com/users")
-          .then(response => response.json())
-          .then(data => setUsers(data))
-  },[])
-
-  const addUsers = (newUsers) =>{
-    setUsers(prevUsers => [...prevUsers, newUsers]);
-  };
-
+function App() {
   return(
     <div>
-      <h2>Users list</h2>
-
-    <Userform onAddUser = {addUsers}/>
-
-    {users.map(user =>{
-      return <p key={user.id}>{user.name}</p>
-    })}
-
+      <ToggleText/>
     </div>
   )
-
 }
 
 export default App
