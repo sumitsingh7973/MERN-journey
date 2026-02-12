@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Add your base styles here */
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.card {
+    background-color: pink;
+    border-radius: 10px;
+}
