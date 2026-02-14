@@ -12,36 +12,30 @@ body {
     background-color: #111;
 }
 
-.parent{
-    padding: 20px;
-    display: flex;
-    flex-wrap:wrap;
-    
+.parent {
+    height: 100vh;
+    width: 100%;
+    background-color: #958e8e;
+    padding: 30px;
 }
 
 .card {
+    height: 400px;
     width: 300px;
     border: 2px solid white;
-    padding: 20px;
-    text-align: center;
     border-radius: 10px;
-    margin: 15px;
-    background-color: rgb(51, 54, 54);
+    background-color: rgb(68, 68, 68);
 }
 
-.card p{
-    margin: 20px 0px;
+.card .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.card button{
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-}
+ 
 
-.card img{
+.card img {
     height: 140px;
     width: 140px;
     border-radius: 50%;
