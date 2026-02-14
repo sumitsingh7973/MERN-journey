@@ -25,6 +25,7 @@ body {
     border: 2px solid white;
     border-radius: 10px;
     background-color: rgb(68, 68, 68);
+    padding: 30px;
 }
 
 .card .top {
@@ -33,11 +34,12 @@ body {
     justify-content: space-between;
 }
 
- 
 
-.card img {
-    height: 140px;
-    width: 140px;
+
+.top img {
+    height: 30px;
+    width: 32px;
     border-radius: 50%;
-    object-fit: contain;
+    border: 1px solid #dada;
+    padding: 32;
 }
