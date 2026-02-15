@@ -49,7 +49,7 @@ body {
     padding: 32;
 }
 
-.top button{
+.top button {
     display: flex;
     align-items: center;
     border: 1px solid #dadada;
@@ -57,33 +57,33 @@ body {
     font-size: 11px;
     border-radius: 5px;
     gap: 30px;
-    color:#fefafa;
+    color: #fefafa;
     background-color: transparent;
 }
 
 
-.center h3{
+.center h3 {
     font-size: 17px;
     font-weight: 500;
 }
 
-.center h3 span{
+.center h3 span {
     font-size: 9px;
     font-weight: 400;
     color: #958e8e;
 }
 
-.center h2{
+.center h2 {
     font-size: 20px
 }
 
-.center .tag{
+.center .tag {
     display: flex;
     gap: 15px;
     margin-top: 10px;
 }
 
-.center .tag h4{
+.center .tag h4 {
     font-size: 14px;
     background-color: rgb(104, 102, 102);
     color: white;
@@ -92,25 +92,25 @@ body {
     border-radius: 8px;
 }
 
-.bottom{
+.bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1.5px solid #7f7676;
-    padding-top: 10px ;
+    padding-top: 10px;
 }
 
-.bottom h3{
+.bottom h3 {
     font-size: 17px;
-    
+
 }
 
-.bottom p{
+.bottom p {
     font-size: 18px;
-    color: color: #8b8b8b;;
+    color: #8b8b8b;
 }
 
-.bottom button{
+.bottom button {
     background-color: black;
     color: white;
     padding: 5px 10px;
@@ -118,4 +118,3 @@ body {
     border-radius: 10px;
 
 }
-
