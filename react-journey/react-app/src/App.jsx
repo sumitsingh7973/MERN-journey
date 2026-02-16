@@ -8,8 +8,11 @@ const App = () => {
   return (
     <div>
       <div className="parent">
-        <User name = {arr[0]}/>
-        <User name = "sumit"/>
+        {arr.map(function(naam){
+          console.log(naam);
+          
+          return naam*2
+        })}
       </div>
     </div>
 
