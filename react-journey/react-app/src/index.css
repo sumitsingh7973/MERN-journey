@@ -13,7 +13,7 @@ body {
 }
 
 .parent {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #958e8e;
     padding: 30px;
@@ -76,6 +76,14 @@ body {
 .center h2 {
     font-size: 20px
 }
+
+.center h2 span {
+    font-size: 14px;
+    color: gray;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
 
 .center .tag {
     display: flex;

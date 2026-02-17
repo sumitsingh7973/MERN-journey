@@ -120,7 +120,9 @@ console.log(jobs);
   return (
     <div>
       <div className="parent">
-        
+        {jobs.map(function(elem){
+          return <Card company= {elem.company} post={elem.datePosted} logo={elem.brandLogo}/>
+        })}
       </div>
     </div>
 

@@ -12,18 +12,18 @@ const Card = (props) => {
            <button>Save <Bookmark size={15} color="black" /></button>
           </div>
           <div className="center">
-            <h2>{props.company} <span>{props.time}</span></h2>
+            <h2>{props.company} <span>{props.post}</span></h2>
             <h2>{props.position}</h2>
             <div className='tag'>
               <h4>Part Time</h4>
-              <h4>{props.avalability}</h4>
+              <h4>Full Time</h4>
             </div>
           </div>
         </div>
           <div className="bottom">
               <div>
-                <h3>{props.payof}</h3>
-                <p>{props.location}</p>
+                <h3>$120hr</h3>
+                <p>Mumbai/India</p>
               </div>
               <button>Apply Now</button>
           </div>
