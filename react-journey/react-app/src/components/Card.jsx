@@ -15,15 +15,15 @@ const Card = (props) => {
             <h2>{props.company} <span>{props.post}</span></h2>
             <h2>{props.position}</h2>
             <div className='tag'>
-              <h4>Part Time</h4>
-              <h4>Full Time</h4>
+              <h4>{props.type}</h4>
+              <h4>{props.type2}</h4>
             </div>
           </div>
         </div>
           <div className="bottom">
               <div>
-                <h3>$120hr</h3>
-                <p>Mumbai/India</p>
+                <h3>{props.pay}</h3>
+                <p>{props.location}</p>
               </div>
               <button>Apply Now</button>
           </div>

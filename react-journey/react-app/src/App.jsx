@@ -28,7 +28,7 @@ const App = () => {
   },
   {
     id: 3,
-    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_087I53sGyPiHuopG8Ew8fpBaxCPWn2Nxrg&s",
     company: "Meta",
     datePosted: "1 week ago",
     post: "React Developer",
@@ -94,7 +94,7 @@ const App = () => {
   },
   {
     id: 9,
-    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_087I53sGyPiHuopG8Ew8fpBaxCPWn2Nxrg&s",
     company: "Meta",
     datePosted: "3 days ago",
     post: "AI Engineer",
@@ -121,7 +121,7 @@ console.log(jobs);
     <div>
       <div className="parent">
         {jobs.map(function(elem){
-          return <Card company= {elem.company} post={elem.datePosted} logo={elem.brandLogo}/>
+          return <Card company= {elem.company} post={elem.datePosted} logo={elem.brandLogo} position={elem.post} type={elem.tag1} type2={elem.tag2} pay={elem.payPerHour} location={elem.location}/>
         })}
       </div>
     </div>
