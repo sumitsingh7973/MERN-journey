@@ -6,7 +6,7 @@ const App = () => {
   const jobs = [
   {
     id: 1,
-    brandLogo: "https://logo.clearbit.com/google.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
     company: "Google",
     datePosted: "5 days ago",
     post: "Frontend Developer",
@@ -17,7 +17,7 @@ const App = () => {
   },
   {
     id: 2,
-    brandLogo: "https://logo.clearbit.com/apple.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
     company: "Apple",
     datePosted: "2 days ago",
     post: "iOS Developer",
@@ -28,7 +28,7 @@ const App = () => {
   },
   {
     id: 3,
-    brandLogo: "https://logo.clearbit.com/meta.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
     company: "Meta",
     datePosted: "1 week ago",
     post: "React Developer",
@@ -39,7 +39,7 @@ const App = () => {
   },
   {
     id: 4,
-    brandLogo: "https://logo.clearbit.com/amazon.com",
+    brandLogo:"https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
     company: "Amazon",
     datePosted: "3 days ago",
     post: "Backend Engineer",
@@ -50,7 +50,7 @@ const App = () => {
   },
   {
     id: 5,
-    brandLogo: "https://logo.clearbit.com/netflix.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
     company: "Netflix",
     datePosted: "4 days ago",
     post: "UI/UX Designer",
@@ -61,7 +61,7 @@ const App = () => {
   },
   {
     id: 6,
-    brandLogo: "https://logo.clearbit.com/microsoft.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
     company: "Microsoft",
     datePosted: "6 days ago",
     post: "Cloud Engineer",
@@ -72,7 +72,7 @@ const App = () => {
   },
   {
     id: 7,
-    brandLogo: "https://logo.clearbit.com/google.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
     company: "Google",
     datePosted: "2 weeks ago",
     post: "Data Analyst",
@@ -83,7 +83,7 @@ const App = () => {
   },
   {
     id: 8,
-    brandLogo: "https://logo.clearbit.com/apple.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
     company: "Apple",
     datePosted: "1 day ago",
     post: "DevOps Engineer",
@@ -94,7 +94,7 @@ const App = () => {
   },
   {
     id: 9,
-    brandLogo: "https://logo.clearbit.com/meta.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
     company: "Meta",
     datePosted: "3 days ago",
     post: "AI Engineer",
@@ -105,7 +105,7 @@ const App = () => {
   },
   {
     id: 10,
-    brandLogo: "https://logo.clearbit.com/amazon.com",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
     company: "Amazon",
     datePosted: "1 week ago",
     post: "Software Engineer",
