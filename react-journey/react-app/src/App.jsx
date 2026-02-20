@@ -121,9 +121,10 @@ console.log(jobs);
     <div>
       <div className="parent">
         {jobs.map(function(elem,index){
-          console.log(index);
           
-          return <Card company= {elem.company} post={elem.datePosted} logo={elem.brandLogo} position={elem.post} type={elem.tag1} type2={elem.tag2} pay={elem.payPerHour} location={elem.location}/>
+          return <div key={index}>
+            <Card company= {elem.company} post={elem.datePosted} logo={elem.brandLogo} position={elem.post} type={elem.tag1} type2={elem.tag2} pay={elem.payPerHour} location={elem.location}/>
+          </div>
         })}
       </div>
     </div>
@@ -131,5 +132,4 @@ console.log(jobs);
   )
 }
 
-export default App
-// 2:34:11
+export default App 
