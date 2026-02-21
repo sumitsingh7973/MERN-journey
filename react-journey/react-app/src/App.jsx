@@ -5,6 +5,7 @@ import User from './components/User';
 const App = () => {
   return(
     <>
+    <Card/>
     </>
   )
 }
