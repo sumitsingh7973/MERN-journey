@@ -1,10 +1,13 @@
-// import './App.css'
+import React from 'react'
+import Header from './components/Header'
+import Button from './components/button'
 
-function App() {
+const App = () => {
   return (
-    <>
-      
-    </>
+    <div>
+      <Header/>
+      <Button/>
+    </div>
   )
 }
 
