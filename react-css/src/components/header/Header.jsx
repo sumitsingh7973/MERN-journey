@@ -1,14 +1,14 @@
 import React from 'react'
-import  '../styles/Header.css'
+import styles from './Header.module.css'
 const Header = () => {
   return (
-    <div>
+    <div className= {styles.H1}>
       <h1>SUMIT SINGH</h1>
       <h3>MCA</h3>
-      <button className='btn'>Login</button>
+      <button className={styles.botn}>Login</button>
     </div>
   )
 }
 
 export default Header
-//2:53:01
+//3:03:01

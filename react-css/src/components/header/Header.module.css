@@ -1,11 +1,10 @@
 h1 {
     background-color: seagreen;
-    height: 70vh;
+    height: 50px;
     width: fit-content;
 }
 
-.btn {
-    padding: 10px 20px;
-    background-color: rgb(18, 236, 149);
-    color: white;
+.botn {
+    background-color: red;
+    padding: 20px 20px;
 }
