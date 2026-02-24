@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from './components/header/Header'
-import Button from './components/button/Button'
+
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <Button/>
+    <div className='h-screen w-full bg-gray-600'>
+      app
+      
     </div>
   )
 }
