@@ -6,7 +6,7 @@ const RightCardContent = (props) => {
   return (
     <div>
       <div className='absolute top-0 left-0 h-full w-full p-8 flex flex-col justify-between cursor-grab'>
-          <h2 className='bg-white  text-2xl rounded-full h-10 w-10 flex justify-center items-center'>{props.id}</h2>
+          <h2 className='bg-white  text-2xl rounded-full h-10 w-10 flex justify-center items-center'>{props.id+1}</h2>
           <div>
             <p className=' text-white mb-14 text-lg leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quaerat illum provident incidunt excepturi possimus?</p>
             <div className='flex justify-between'>
