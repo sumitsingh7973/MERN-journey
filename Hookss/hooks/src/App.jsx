@@ -4,8 +4,7 @@ const App = () => {
   const [num , setNum] = useState(10)
 
   const btnClick =()=>{
-    setNum(20)
-    
+    setNum( num+2)
   }
 
   return (
@@ -17,3 +16,5 @@ const App = () => {
 }
 
 export default App
+
+//5:40:04
