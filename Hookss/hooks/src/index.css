@@ -1,7 +1,14 @@
-button{
+button {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
     background-color: rgb(151, 144, 144);
     color: white;
+}
+
+h1 {
+    margin: 10px;
+    color: rgb(157, 155, 155);
+    border-radius: 20px;
+    padding: 30px 20px;
 }
