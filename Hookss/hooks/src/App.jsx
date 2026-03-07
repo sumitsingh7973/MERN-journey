@@ -4,7 +4,7 @@ const App = () => {
   const [num , setNum] = useState(10)
 
   const btnClick =()=>{
-    setNum( num+2)
+    const newNUM = [...num];
   }
 
   return (
