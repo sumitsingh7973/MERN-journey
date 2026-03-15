@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { X } from 'lucide-react';
+
 
 const App = () => {
   
@@ -60,7 +62,7 @@ const App = () => {
         <div className='flex flex-wrap items-start justify-start gap-5 h-full mt-5 overflow-auto text-white'>
           {task.map(function(elem,idx){
             return <div key={idx}className="relative h-60 w-40 py-8 px-4 bg-cover rounded-xl text-black bg-[url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')]">
-              <h2></h2>
+              <h2> <X /></h2>
               <h3 className='leading-tight text-xl font-semibold '>{elem.title}</h3>
               <p className='mt-2 leading-tight font-medium text-gray-700'>{elem.details}</p>
             </div>
