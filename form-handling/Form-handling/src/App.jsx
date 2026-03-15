@@ -25,6 +25,13 @@ const App = () => {
     setDetails("")
   }
 
+  const delteNote = (idx) => {
+    const copyTask = [...task]
+    copyTask.splice(idx,1)
+
+    setTask(copyTask)
+  }
+
 
   return (
     <div className='h-screen lg:flex  bg-black '>
@@ -59,7 +66,7 @@ const App = () => {
       </form>
       <div className=' lg:w-1/2  p-10 lg:border-l-2 border-white '>
         <h1 className='text-3xl font-bold text-white'>Your notes</h1>
-        <div className='flex flex-wrap items-start justify-start gap-5 h-full mt-5 overflow-auto text-white'>
+        <div className='flex flex-wrap items-start justify-start gap-5 h-[90%] mt-5 overflow-auto text-white'>
           {task.map(function (elem, idx) {
 
             return <div
@@ -75,7 +82,9 @@ const App = () => {
                 </p>
               </div>
 
-              <button className="w-full py-2 text-xs font-semibold text-white bg-red-500 rounded-md cursor-pointer active:scale-95 transition-transform">
+              <button onClick={()=>{
+                delteNote(idx)
+              }} className="w-full py-2 text-xs font-semibold text-white bg-red-500 rounded-md cursor-pointer active:scale-95 transition-transform">
                 Delete
               </button>
             </div>
@@ -83,7 +92,7 @@ const App = () => {
           })}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
