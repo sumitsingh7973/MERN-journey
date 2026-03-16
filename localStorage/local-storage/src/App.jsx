@@ -1,13 +1,10 @@
 import React from 'react'
 
 const App = () => {
-  const age = localStorage.getItem('age')
+  localStorage.setItem("user", "sumit")
   const user = localStorage.getItem('user')
-  localStorage.removeItem('user')
-  console.log(age);
+  const rr = localStorage.removeItem('user')
   console.log(user);
-  
-
 
   return (
 
