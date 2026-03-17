@@ -13,24 +13,24 @@ const App = () => {
     //     console.log(data);
 
     // }
-    const [ data,setData] = useState([])
+    const [data, setData] = useState([])
 
     const getData = async () => {
 
-       const response = await axios.get('https://picsum.photos/v2/list')
+        const response = await axios.get('https://picsum.photos/v2/list')
 
-       setData(response.data)
-       
+        setData(response.data)
+
     }
     return (
         <div>
             <button onClick={getData}>get data</button>
             <div></div>
-            {data.map(function(elem,idx){
-                return <h3>hello{elem.author}</h3>
+            {data.map(function (elem, idx) {
+                return <h3>hello{elem.author}{idx}</h3>
             })}
         </div>
-        
+
     )
 }
 
