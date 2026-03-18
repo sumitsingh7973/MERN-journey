@@ -10,13 +10,18 @@ const App = () => {
   const getData = async (elem, idx) => {
     const response = await axios.get('https://picsum.photos/v2/list?page=2&limit=10')
     setUserdata(response.data)
+    
+    
   }
   let printUserData = "No User Data"
 
   if (userdata.length > 0) {
-    printUserData = userdata.map(function () {
-      return 'hello'
+    printUserData = userdata.map(function (elem,idx) {
+      return <div>
+        <img src={elem.author} alt="" />
+      </div>
     })
+   
   }
   return (
     <div className='className= bg-gray-500 h-screen'>
