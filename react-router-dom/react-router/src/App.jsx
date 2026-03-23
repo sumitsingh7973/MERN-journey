@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes , Link } from 'react-router-dom'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
@@ -8,9 +8,9 @@ const App = () => {
   return (
     <div className='bg-gray-600 h-screen'>
       <div className='flex justify-end gap-5 items-center p-5 text-white font-semibold text-lg'>
-        <h1>Home</h1>
-        <h1>Contact</h1>
-        <h1>About Us</h1>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </div>
 
       <div className='border-t border-white flex justify-between'>
