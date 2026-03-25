@@ -8,14 +8,18 @@ import Products from './pages/Products'
 import Notfound from './pages/Notfound'
 import Men from './pages/Men'
 import Women from './pages/Women'
+import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
 
 const App = () => {
   return (
     <div className='h-screen bg-black text-white'>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/'element={<Home />} />
+        <Route path='/about'element={<About />} />
+        <Route path='/courses'element={<Courses/>}/>
+        <Route path='/courses/:id' element={<CourseDetail/>}/>
         <Route path='/products' element={<Products />}>
           <Route path='men' element={<Men />} />
           <Route path='women' element={<Women />} />
