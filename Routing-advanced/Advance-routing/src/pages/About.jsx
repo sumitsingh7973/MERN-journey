@@ -5,8 +5,11 @@ const About = () => {
     
     return (
         <div>
-            
-            <h1>About</h1>
+            <div className='h-screen bg-black'>
+                <div>
+                    <h1>hey</h1>
+                </div>
+            </div>
         </div>
     )
 }
