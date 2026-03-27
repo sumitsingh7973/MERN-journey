@@ -6,8 +6,6 @@ import About from './pages/About'
 import { Route, Routes } from 'react-router-dom'
 import Travel from './pages/Travel'
 import Notfound from './pages/Notfound'
-import Men from './pages/Mountains'
-import Women from './pages/Women'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
 import Navbar2 from './components/Navbar2'
@@ -24,11 +22,7 @@ const App = () => {
         <Route path='/about'element={<About />} />
         <Route path='/courses'element={<Courses/>}/>
         <Route path='/courses/:id' element={<CourseDetail/>}/>
-        <Route path='/travel' element={<Travel />}>
-          <Route path='men' element={<Men />} />
-          <Route path='women' element={<Women />} />
-        </Route>
-
+        <Route path='/travel' element={<Travel />}></Route>
         <Route path='*' element={<Notfound />} />
       </Routes>
       <Footer />
