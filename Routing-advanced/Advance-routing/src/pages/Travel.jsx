@@ -7,10 +7,10 @@ const Travel = () => {
     <>
       <div className='border-t border-white flex justify-between'>
         <div className='min-h-150 m-5 max-w-xs'>
-          <h2 className='font-bold font-serif pt-5 text-4xl m-2 active:text-amber-300 cursor-pointer' >Explore Your Dream Destination</h2>
+          <h2 className='font-bold font-serif pt-5 text-4xl m-2 active:text-amber-300 cursor-pointer ' >Explore Your Dream Destination</h2>
         </div>
 
-        <div className="bg-cover bg-black/50 w-full m-2 rounded-4xl flex overflow-x-scroll gap-6 no-scrollbar p-5">
+        <div className="bg-cover bg-black/50 w-full m-2 rounded-4xl flex overflow-x-scroll gap-6 no-scrollbar p-5 mt-15">
 
           {/* Image 1 */}
           <div className="relative min-w-50 h-60 rounded-3xl overflow-hidden transition duration-300 hover:scale-105">
