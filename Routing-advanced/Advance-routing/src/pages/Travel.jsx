@@ -10,7 +10,7 @@ const Travel = () => {
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+      img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmlnaHR8ZW58MHx8MHx8fDA%3D"
     },
     {
       id: 3,
