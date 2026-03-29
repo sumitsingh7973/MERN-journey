@@ -8,15 +8,15 @@ const Navbar2 = () => {
         <button onClick={()=>{
                 navigate('/')
             }}
-          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 '>Return to home-page</button>
+          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 transition duration-300 hover:scale-110 hover:text-gray-800 hover:bg-white'>Return to home-page</button>
         <button onClick={()=>{
                 navigate(-1)
             }}
-          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 '>Return  Back</button>
+          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 transition duration-300 hover:scale-110 hover:text-gray-800 hover:bg-white'>Return  Back</button>
         <button onClick={()=>{
                 navigate(+1)
             }}
-          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 '>Next</button>
+          className='bg-mauve-700 text-white px-3 py-3 rounded cursor-pointer m-5 active:scale-90 transition duration-300 hover:scale-110 hover:text-gray-800 hover:bg-white '>Next</button>
     </div>
   )
 }
