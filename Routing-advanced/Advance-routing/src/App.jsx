@@ -8,6 +8,7 @@ import Notfound from './pages/Notfound'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
 import Navbar2 from './components/Navbar2'
+import Explore from './pages/Explore'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/courses'element={<Courses/>}/>
         <Route path='/courses/:id' element={<CourseDetail/>}/>
         <Route path='/travel' element={<Travel />}></Route>
+        <Route path='/explore' element={<Explore/>}></Route>
         <Route path='*' element={<Notfound />} />
       </Routes>
       <Footer />

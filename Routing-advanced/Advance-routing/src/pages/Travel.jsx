@@ -1,8 +1,7 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import Explore from './Explore';
 
 const Travel = () => {
-
-  // ✅ Array (data)
   const destinations = [
     {
       id: 1,
@@ -22,8 +21,8 @@ const Travel = () => {
     }
   ];
   console.log(destinations);
-  
 
+  const navigate = useNavigate()
   return (
     <>
       <div className='border-t border-white flex justify-between'>
@@ -55,7 +54,9 @@ const Travel = () => {
               <div className="absolute inset-0 bg-black/20 hover:bg-black/40 transition duration-300"></div>
 
               {/* Button */}
-              <button className="absolute bottom-4 left-4 bg-indigo-600 hover:bg-indigo-700 
+              <button onClick={()=>{
+                 navigate('/Explore')
+              }} className="absolute bottom-4 left-4 bg-indigo-600 hover:bg-indigo-700 
                                  text-white px-4 py-2 rounded-xl transition duration-300">
                 Explore
               </button>
