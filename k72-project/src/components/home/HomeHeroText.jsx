@@ -7,7 +7,7 @@ const HomeHeroText = () => {
       <div className='text-[10vw] uppercase leading-[9.5vw] justify-center flex'>The spark for</div>
       <div className='text-[10vw] uppercase leading-[9.5vw] justify-center flex'>
         all
-        <div className='h-[8vw] rounded-full overflow-hidden mt-3 '>
+        <div className='h-[7vw] rounded-full overflow-hidden  mt-3 '>
           <Video />
         </div>things
       </div>
