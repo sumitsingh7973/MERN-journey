@@ -1,10 +1,36 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import React, { useRef } from 'react'
+
 
 const Agence = () => {
+
+  const imageDivRef = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(function () {
+    gsap.to(imageDivRef.current, {
+      scrollTrigger: {
+        trigger: imageDivRef.current,
+        markers: true,
+        start: 'top 28%',
+        end: '150%',
+        scrub: true,
+        pin: true
+
+      }
+
+    })
+
+  })
+
+
   return (
     <div>
       <div className='section-1'>
-        <div className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl  left-[25vw] top-55'>
+        <div ref={imageDivRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl  left-[25vw] top-55'>
           <img className='h-full w-full object-cover ' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
         </div>
         <div className='relative  font-[font2]'>
@@ -18,8 +44,8 @@ const Agence = () => {
         </div>
       </div>
       <div className='section-2 h-screen'>
-        
-        
+
+
       </div>
     </div>
   )
