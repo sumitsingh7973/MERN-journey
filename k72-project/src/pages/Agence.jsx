@@ -24,7 +24,8 @@ const Agence = () => {
 
     'https://k72.ca/images/teamMembers/CAMILLE_480X640_2.jpg?w=480&h=640&fit=crop&s=74317575b2d72fd11c5296615c383e4a',
   ]
-
+  console.log(imageArray);
+  
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
@@ -32,11 +33,14 @@ const Agence = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         markers: true,
-        start: 'top 27%',
+        start: 'top 25%',
         end: 'top -70%',
-
-        pin: true
-
+        pin: true,
+        onUpdate: (elem) => {
+          const imageIndex = Math.floor(elem.progress * imageArray.length)
+          imageRef.current.src = imageArray[imageIndex]
+          
+        }
       }
 
     })
