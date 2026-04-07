@@ -37,7 +37,12 @@ const Agence = () => {
         end: 'top -70%',
         pin: true,
         onUpdate: (elem) => {
-          const imageIndex = Math.floor(elem.progress * imageArray.length)
+          let imageIndex
+         if(elem.progress<1){
+           imageIndex = Math.floor(elem.progress * imageArray.length)
+         }else{
+          imageIndex = imageArray.length-1 
+         }
           imageRef.current.src = imageArray[imageIndex]
           
         }
@@ -59,8 +64,8 @@ const Agence = () => {
             <h1 className='text-[20vw] text-center uppercase leading-[17vw]'>SEVEN7Y<br />
               TWO</h1>
           </div>
-          <div className='pl-[50%]  mt-15'>
-            <p className='text-2xl w-2/1 '> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+          <div className='pl-[50%]  mt-15 ml-5'>
+            <p className='text-2xl w-1/1 '> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
           </div>
         </div>
       </div>
