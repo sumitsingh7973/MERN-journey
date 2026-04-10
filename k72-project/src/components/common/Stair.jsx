@@ -11,7 +11,7 @@ const Stair = () => {
     useGSAP(function () {
 
         const tl = gsap.timeline()
-        tl.to('.stairParentRef.current', {
+        tl.to(stairParentRef.current, {
             display: 'block'
         })
 
@@ -28,18 +28,18 @@ const Stair = () => {
             }
         })
 
-        tl.to('.stairParentRef.current', {
+        tl.to(stairParentRef.current, {
             display: 'none'
         })
 
-        // tl.to('.stair', {
-        //     y: '0%',
+        tl.to('.stair', {
+            y: '0%',
 
-        // })
+        })
     })
     return (
-        <div ref={stairParentRef} className='h-screen w-full   fixed z-20 top-0'>
-            <div className='h-full w-full flex  fixed '>
+        <div ref={stairParentRef} className='h-screen w-full  fixed z-20 top-0'>
+            <div className='h-full w-full flex  '>
 
                 <div className=' stair h-full w-1/5 bg-black'>
                 </div>
