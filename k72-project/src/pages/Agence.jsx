@@ -25,25 +25,31 @@ const Agence = () => {
     'https://k72.ca/images/teamMembers/CAMILLE_480X640_2.jpg?w=480&h=640&fit=crop&s=74317575b2d72fd11c5296615c383e4a',
   ]
   console.log(imageArray);
-  
+
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
         trigger: imageDivRef.current,
-        start: 'top 25%',
+        start: 'top 28%',
         end: 'top -70%',
+        pinSpacing:true,
+        pinReparent:true,
+        pinType:'transform',
+        anticipatePin:1,
+        invalidateOnRefresh:true,
+        scrub:1,
         pin: true,
         onUpdate: (elem) => {
           let imageIndex
-         if(elem.progress<1){
-           imageIndex = Math.floor(elem.progress * imageArray.length)
-         }else{
-          imageIndex = imageArray.length-1 
-         }
+          if (elem.progress < 1) {
+            imageIndex = Math.floor(elem.progress * imageArray.length)
+          } else {
+            imageIndex = imageArray.length - 1
+          }
           imageRef.current.src = imageArray[imageIndex]
-          
+
         }
       }
 
@@ -54,8 +60,8 @@ const Agence = () => {
 
   return (
     <div>
-      <div className='section-1'>
-        <div ref={imageDivRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl  left-[30vw] top-55'>
+      <div className='section-1  py-4'>
+        <div ref={imageDivRef} className='absolute overflow-hidden h-[20vw] w-[15vw] rounded-4xl  left-[30vw] top-58'>
           <img ref={imageRef} className='h-full w-full object-cover ' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
         </div>
         <div className='relative  font-[font2]'>

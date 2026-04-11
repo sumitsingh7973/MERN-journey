@@ -13,7 +13,7 @@ const Stair = (props) => {
     const currentPath = useLocation().pathname
 
     const stairParentRef = useRef(null)
-    const pageRef = useRef('null')
+    const pageRef = useRef(null)
 
     useGSAP(function () {
 
@@ -23,7 +23,7 @@ const Stair = (props) => {
         })
 
         tl.from('.stair', {
-            height: 0,
+            height: 1,
             stagger: {
                 amount: -0.5
             }
@@ -46,8 +46,8 @@ const Stair = (props) => {
 
         gsap.from(pageRef.current,{
             opacity:0,
-            delay:1.3,
-            scale:2
+            delay:1.5,
+            scale:1
         })
     }, [currentPath])
     return (
