@@ -19,9 +19,9 @@ const Navbar = () => {
         onMouseLeave={() => {
           navGreenRef.current.style.height = '0%'
         }}
-        className=" h-10 bg-black relative w-[10vw]">
+        className=" h-5 bg-black relative w-[16vw]">
         <div className="relative"></div>
-        <div ref={navGreenRef} className="bg-green-500 absolute top-0 h-0 w-full">
+        <div ref={navGreenRef} className="bg-[#d3fd50] transition-all absolute top-0 h-0 w-full">
 
         </div>
       </div>
