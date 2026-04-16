@@ -3,6 +3,7 @@ import Projects from './pages/Projects'
 import Agence from './pages/Agence'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/navigation/Navbar'
+import FullScreenNav from './components/Navigation/FullScreenNav'
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <FullScreenNav />76
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Projects' element={<Projects />} />
