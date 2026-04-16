@@ -11,13 +11,13 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <FullScreenNav />76
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Projects' element={<Projects />} />
         <Route path='/Agence' element={<Agence />} />
-      </Routes>
+      </Routes> */}
     </div>
   )
 }
