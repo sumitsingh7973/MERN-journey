@@ -55,7 +55,7 @@ const Navbar = () => {
                         <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                     </a>
                 ))}
-                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-white hover:text-black hover:text-sm  border-none ${isScrolled ? 'text-black' : 'text-white'} transition-all`}>
+                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-white hover:text-black hover:text-sm  border-none ${isScrolled ? 'text-black' : 'text-white'} transition-all`}  onClick={()=>navigate('/owner')}>
                     Dashboard
                 </button>
             </div>
@@ -80,7 +80,16 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
+                
             <div className="flex items-center gap-3 md:hidden">
+                
+                {user && (<UserButton>
+                        <UserButton.MenuItems>
+                            <UserButton.Action label="My bookings" labelIcon={<BookIcon />}
+                                onClick={() => { navigate('/my-bookings') }} />
+                        </UserButton.MenuItems>
+                    </UserButton>)}
+
                 <img onClick={() => setIsMenuOpen(!isMenuOpen)} src={assets.menuIcon} alt="" className={`${isScrolled && "invert"} h-4 cursor-pointer`} />
             </div>
 
@@ -88,6 +97,7 @@ const Navbar = () => {
             <div className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <button onClick={openSignIn} className="absolute top-4 right-4 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                     <img src={assets.closeIcon} alt="close menu" className="h-6.5" />
+                    
                 </button>
 
                 {navLinks.map((link, i) => (
@@ -96,13 +106,13 @@ const Navbar = () => {
                     </a>
                 ))}
 
-                <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all">
+                {user && <button  className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={()=>navigate('/owner')}>
                     Dashboard
-                </button>
+                </button>}
 
-                <button className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500 cursor-pointer">
+                {!user && <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500 cursor-pointer">
                     Login
-                </button>
+                </button>}
             </div>
         </nav>
     );
