@@ -1,8 +1,8 @@
-import React ,{ useEffect } from "react";
+import { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets"
 import { useClerk, useUser, UserButton } from "@clerk/react";
-import { BookKeyIcon } from "lucide-react";
+
 import { useState } from "react";
 
 const BookIcon = () => (
