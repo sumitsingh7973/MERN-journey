@@ -90,9 +90,109 @@ export const exclusiveOffers = [
 
 // Testimonials Dummy Data
 export const testimonials = [
-    { id: 1, name: "Emma Rodriguez", address: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." },
-    { id: 2, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
-    { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
+    { 
+    id: 1, name: "Emma Rodriguez",
+    address: "Barcelona, Spain",
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", 
+    rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." 
+    },
+
+    { 
+    id: 2, name: "Liam Johnson", 
+    address: "New York, USA", 
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", 
+    rating: 4.4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" 
+    },
+
+    { 
+    id: 3, name: "Sophia Lee", 
+    address: "Seoul, South Korea", 
+    image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", 
+    rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" 
+    },
+
+    { 
+    _id: 4, // Aapke card mein item._id tha, isliye id ko _id rakha hai
+    name: "Emma Rodriguez", 
+    address: "Barcelona, Spain", 
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", 
+    rating: 5, 
+    review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." 
+    },
+
+    { 
+    _id: 5, 
+    name: "Liam Johnson", 
+    address: "New York, USA", 
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", 
+    rating: 4, 
+    review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" 
+    },
+
+    { 
+    _id: 6, 
+    name: "Sophia Lin", 
+    address: "Tokyo, Japan", 
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200", 
+    rating: 5, 
+    review: "The customer service was incredible. They helped us change our booking last minute without any hassle. Will definitely book again!" 
+     },
+     { 
+    _id: 7, 
+    name: "Michael Kraft", 
+    address: "Berlin, Germany", 
+    image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=200", 
+    rating: 5, 
+    review: "Finding authentic local stays has never been easier. QuickStay curated the perfect itinerary for our family vacation." 
+    },
+    { 
+    _id: 8, 
+    name: "Amara Okezie", 
+    address: "Lagos, Nigeria", 
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200", 
+    rating: 4, 
+    review: "Great value for money. The transparent pricing with no hidden fees makes this platform trustworthy." 
+    },
+    { 
+    _id:9, 
+    name: "Elena Rostova", 
+    address: "Prague, Czech Republic", 
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200", 
+    rating: 5, 
+    review: "The luxury villa we booked through QuickStay was breathtaking. What you see in the pictures is exactly what you get. 10/10 experience!" 
+    },
+    { 
+    _id: 10, 
+    name: "Arjun Mehta", 
+    address: "Mumbai, India", 
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200", 
+    rating: 4, 
+    review: "Super fast booking and great discounts for frequent travelers. The check-in process at the property was completely cashless and smooth." 
+    },
+    { 
+    _id: 12, 
+    name: "Chloe Dubois", 
+    address: "Paris, France", 
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200", 
+    rating: 5, 
+    review: "As a solo female traveler, safety is my top priority. QuickStay's verified properties and reviews gave me complete peace of mind during my trip." 
+    }
+    // { 
+    // _id: 13, 
+    // name: "David Kim", 
+    // address: "Seoul, South Korea", 
+    // image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200", 
+    // rating: 4, 
+    // review: "The app interface is incredibly intuitive. Filter options helped me find a pet-friendly apartment near the city center within minutes." 
+    // },
+    // { 
+    // _id: 14, 
+    // name: "Aisha Yusuf", 
+    // address: "Cairo, Egypt", 
+    // image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=200", 
+    // rating: 5, 
+    // review: "Impeccable service! We had an issue with the air conditioning at our stay, and the QuickStay support team resolved it in less than an hour." 
+    // }
 ];
 
 // Facility Icon
