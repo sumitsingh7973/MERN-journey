@@ -65,7 +65,7 @@ const Navbar = () => {
                         <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                     </a>
                 ))}
-                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-white hover:text-black hover:text-sm  border-none ${isScrolled ? 'text-black' : 'text-white'} transition-all`}  onClick={()=>navigate('/owner')}>
+                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-white hover:text-black hover:text-sm  border-none ${isScrolled ? 'text-black' : 'text-white cursor-pointer'} transition-all`}  onClick={()=>navigate('/owner')}>
                     Dashboard
                 </button>
             </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
                         </UserButton.MenuItems>
                     </UserButton>)
                     :
-                    (<button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black cursor-pointer"}`}>
+                    (<button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500  cursor-pointer ${isScrolled ? "text-white bg-black" : "bg-white text-black "}`}>
                         Login
                     </button>)
                 }
