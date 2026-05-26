@@ -7,7 +7,7 @@ const Footer = () => {
 
             <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
                 <div className='max-w-80'>
-                    <img src={assets.logo} alt=""  className="mb-4 h-10 md:h-9  "/>
+                    <img src={assets.logo} alt=""  className="mb-4 h-10 md:h-9 invert opacity-75 "/>
                     <p className='text-sm'>
                         VibeStay makes finding your next room effortless. Whether you need a last-minute business stopover or a well-deserved vacation, we connect you with top-rated hotels at the best prices. Book in seconds, stay with confidence
                     </p>

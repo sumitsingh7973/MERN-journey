@@ -182,7 +182,7 @@ export const testimonials = [
     // name: "David Kim", 
     // address: "Seoul, South Korea", 
     // image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200", 
-    // rating: 4, 
+    // rating: 4,
     // review: "The app interface is incredibly intuitive. Filter options helped me find a pet-friendly apartment near the city center within minutes." 
     // },
     // { 
