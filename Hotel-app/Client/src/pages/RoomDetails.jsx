@@ -17,7 +17,8 @@ const RoomDetails = () => {
     <div className='py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32'>
       {/* room details */}
       <div>
-        <h1>{room.hotel.name}<span></span></h1>
+        <h1>{room.hotel.name}<span>({room.roomType})</span></h1>
+        <p>20% off</p>
       </div>
     </div>
   )
