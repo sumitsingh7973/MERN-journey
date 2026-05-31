@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { assets, roomsDummyData } from '../assets/assets'
 import StarRating from '../components/StarRating'
@@ -23,15 +23,29 @@ const RoomDetails = () => {
       </div>
 
       {/* room rating */}
-      <div>
+      <div className='flex itmes-center gap-1 mt-2'>
         <StarRating/>
         <p className='ml-2'> 200+ reviews</p>
       </div>
 
       {/*Room address */}
-      <div>
+      <div className='flex gap-2 items-center text-gray-500 mt-2'>
         <img src={assets.locationIcon} alt="location-icon" />
         <span>{room.hotel.address}</span>
+      </div>
+
+      {/* Room images */}
+      <div className='flex flex-col lg:flex-row mt-6 gap-6'>
+        <div className='lg:w-1/2 w-full'>
+          <img className='w-full rounded-xl shadow-lg object-cover ' src={mainImage} alt="room-img"/>
+        </div>
+        <div>
+          {room?.images.length > 1 && room.images.map((image,index)=>(
+            <img onClick={()=> setMainImage(image)}
+            key={index} src={image} alt="Room image"
+            className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage === image && 'outline-3 outline-orange-500'}`} />
+          ))}
+        </div>
       </div>
     </div>
   )
