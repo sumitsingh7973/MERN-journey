@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { assets, facilityIcons, roomsDummyData } from '../assets/assets'
+import { assets, facilityIcons, roomCommonData, roomsDummyData } from '../assets/assets'
 import StarRating from '../components/StarRating'
 
 const RoomDetails = () => {
@@ -66,18 +66,67 @@ const RoomDetails = () => {
           <p className='text-2xl font-medium'> ${room.pricePerNight}/night</p>
       </div>
       {/* CheckIn CheckOut Form */}
-      <form className='flex flex-col md:flex-row items-start md:items-center justify-between bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.15) p-6 rounded-xl mx-auto mt-16 max-w-6xl'>
+      <form className='flex flex-col md:flex-row items-start md:items-center justify-between bg-gray-50 shadow-2xl p-6 rounded-xl mx-auto mt-16 max-w-6xl border border-gray-300'>
+
               <div className='flex flex-col flex-wrap md:flex-row items-start md:items-center gap-4 md:gap-10 text-gray-500'>
+
                 <div className='flex flex-col'>
                   <label htmlFor="checkInDate" className='font-medium'>Check In</label>
-                    <input className='w-full rounded border border-gray-300 ox-3 py-2 mt:1.5 outline-none' required  type="date" id='checkInDate' placeholder='Check-In' />
-                  
+                    <input className='w-full rounded border border-gray-300 px-3 py-2 mt:1.5 outline-none' required  type="date" id='checkInDate' placeholder='Check-In' />
                 </div>
+
+                <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
+
+                <div className='flex flex-col'>
+                  <label htmlFor="checkOutDate" className='font-medium'>Check-Out</label>
+                    <input className='w-full rounded border border-gray-300 px-3 py-2 mt:1.5 outline-none' required  type="date" id='checkOutDate' placeholder='Check-Out' />
+                </div>
+
+                <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
+
+                <div className='flex flex-col'>
+                  <label htmlFor="Guests" className='font-medium'>Guests</label>
+                    <input  className='max-w-20 rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' required />
+                </div>
+
               </div>
               <button type='submit' className='bg-primary hover:bg-primary-dull active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>
-                Book Now
+                Check Availability
               </button>
       </form>
+
+      {/* common specifictions */}
+      <div className='mt-25 space-y-4  '>
+        {roomCommonData.map((spec,index)=>(
+          <div key={index} className='flex items-start gap-2'>
+            <img src={spec.icon} alt={`${spec.title}-icon`} className='w-6.5 cursor-pointer'/>
+            <div>
+              <p className='text-base'>{spec.title}</p>
+              <p className='text-gray-500'>{spec.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className='max-w-3xl border-y border-gray-300 my-15 py-10 text-gray-700'>
+        <p>
+          Experience the city vibe in this comfortable two-bedroom apartment, perfect for families or groups. Designed with modern aesthetics and cozy interiors, it features a spacious living area, fully equipped bedrooms, and all essential amenities to make your stay feel like home.
+        </p>
+      </div>
+        {/* owner details or we can say hosted by */}
+        <div className='flex flex-col items-start gap-4'>
+          <div>
+            <img className='h-14 w-14 md:h-18 md:w-18 rounded-full' src={room.hotel.owner.image} alt="host" />
+            <div>
+              <p>Hosted By{room.hotel.name}</p>
+              <div className='flex items-center'>
+                <StarRating/>
+                <p className='ml-2'>200+ reviews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
   )
 }
