@@ -1,8 +1,9 @@
+import Navbar from "../../components/Navbar"
 
 const Layout = () => {
   return (
-    <div>
-      
+    <div className="flex flex-col h-screen">
+      <Navbar/>
     </div>
   )
 }
